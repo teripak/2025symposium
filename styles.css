@@ -5,11 +5,15 @@
     box-sizing: border-box;
 }
 
+html {
+    background: #1e40af;
+}
+
 body {
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: #f8f9fa;
+    background: #1e40af;
 }
 
 .container {
@@ -141,6 +145,7 @@ body {
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+    z-index: 1000;
 }
 
 /* Hero Section */
@@ -237,7 +242,7 @@ body {
 /* Event Overview Section */
 .event-overview {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-    padding: 6rem 0;
+    padding: 0;
     position: relative;
     overflow: hidden;
 }
@@ -362,12 +367,12 @@ body {
 
 /* Main Content Sections */
 .main-content {
-    padding: 4rem 0;
+    padding: 0;
 }
 
 .section {
-    padding: 4rem 0;
-    border-bottom: 1px solid #e5e7eb;
+    padding: 0;
+    border-bottom: none;
 }
 
 .section:last-child {
@@ -442,7 +447,7 @@ body {
     background: #1e3a8a;
     color: white;
     padding: 3rem 0;
-    margin-top: 4rem;
+    margin-top: 0;
 }
 
 .footer-content {
@@ -471,13 +476,17 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-menu {
         display: none;
     }
     
     .mobile-menu-toggle {
         display: block;
+    }
+    
+    .logo h1 {
+        font-size: 1.2rem;
     }
     
     .hero-content {
@@ -503,9 +512,17 @@ body {
         font-size: 3rem;
     }
     
+    .hero-visual {
+        display: none;
+    }
+    
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    .footer-logo {
+        display: none;
     }
     
     .nav-menu {
@@ -518,10 +535,44 @@ body {
         padding: 2rem;
         transform: translateY(-100%);
         transition: transform 0.3s ease;
+        display: none;
     }
     
     .nav-menu.active {
         transform: translateY(0);
+        display: block;
+    }
+    
+    /* Mobile dropdown styles */
+    .dropdown {
+        position: static;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        padding: 0;
+        margin-top: 0.5rem;
+        margin-left: 1rem;
+    }
+    
+    .dropdown-menu.show {
+        display: block;
+    }
+    
+    .dropdown-menu li a {
+        color: white;
+        padding: 0.5rem 1rem;
+    }
+    
+    .dropdown-menu li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
     }
     
     /* Event Overview Responsive */
@@ -556,6 +607,10 @@ body {
 @media (max-width: 480px) {
     .container {
         padding: 0 15px;
+    }
+    
+    .logo h1 {
+        font-size: 1rem;
     }
     
     .hero-title {

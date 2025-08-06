@@ -67,16 +67,21 @@ function initializeHeader() {
         }
     });
 
-    // Dropdown menu hover effects
+    // Dropdown menu hover effects (desktop only)
     $('.dropdown').on('mouseenter', function() {
-        $(this).find('.dropdown-menu').addClass('show');
+        if ($(window).width() > 1024) {
+            $(this).find('.dropdown-menu').addClass('show');
+        }
     }).on('mouseleave', function() {
-        $(this).find('.dropdown-menu').removeClass('show');
+        if ($(window).width() > 1024) {
+            $(this).find('.dropdown-menu').removeClass('show');
+        }
     });
 
     // Dropdown menu click effects for mobile
-    $('.dropdown > .nav-link').on('click', function(e) {
+    $(document).on('click', '.dropdown > .nav-link', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         const dropdown = $(this).parent();
         const dropdownMenu = dropdown.find('.dropdown-menu');
         
@@ -85,6 +90,9 @@ function initializeHeader() {
         
         // Toggle current dropdown
         dropdownMenu.toggleClass('show');
+        
+        // Log for debugging
+        console.log('Dropdown clicked:', dropdownMenu.hasClass('show'));
     });
 
     // Close dropdown when clicking outside
