@@ -1,0 +1,264 @@
+/* Exhibition Page Styles */
+
+.exhibition-maps {
+    margin-top: 3rem;
+}
+
+.map-section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+}
+
+.map-section:last-child {
+    margin-bottom: 0;
+}
+
+.map-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.map-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    border-radius: 2px;
+}
+
+.map-container {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.exhibition-map {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.exhibition-map:hover {
+    transform: scale(1.02);
+}
+
+.map-description {
+    margin-top: 2rem;
+}
+
+.map-description h4 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.exhibition-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-section {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    border-left: 4px solid #3b82f6;
+    transition: all 0.3s ease;
+}
+
+.info-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-section h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.info-section h5::before {
+    content: '';
+    width: 20px;
+    height: 3px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    border-radius: 2px;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-section ul li {
+    padding: 0.5rem 0;
+    color: #6b7280;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.info-section ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #3b82f6;
+    font-weight: bold;
+}
+
+/* Exhibition Guide */
+.exhibition-guide {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+}
+
+.guide-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.guide-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    border-radius: 2px;
+}
+
+.guide-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.guide-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.guide-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.guide-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.guide-text h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e3a8a;
+    margin-bottom: 0.5rem;
+}
+
+.guide-text p {
+    color: #6b7280;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-section {
+        padding: 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .map-title {
+        font-size: 1.5rem;
+    }
+    
+    .exhibition-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .info-section {
+        padding: 1rem;
+    }
+    
+    .guide-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .guide-item {
+        padding: 1rem;
+    }
+    
+    .guide-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-section {
+        padding: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .map-title {
+        font-size: 1.3rem;
+    }
+    
+    .exhibition-guide {
+        padding: 1.5rem;
+    }
+    
+    .guide-title {
+        font-size: 1.5rem;
+    }
+} 
