@@ -16,7 +16,8 @@
         background: transparent !important;
         height: 100vh !important;
         min-height: 100vh !important;
-        padding-top: 80px !important;
+        padding-top: 0 !important;
+        margin-top: 0 !important;
     }
     
     .hero::before {
@@ -27,6 +28,7 @@
         max-width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
+        height: 100vh !important;
     }
     
     .hero-content {
@@ -37,47 +39,134 @@
         height: 100vh !important;
         padding: 0 !important;
         margin: 0 !important;
+        position: relative !important;
     }
     
-    .main-banner-image {
-        width: 100% !important;
-        height: 100% !important;
+    .banner-container {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        z-index: 1 !important;
+    }
+    
+    .background-image {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
         object-fit: cover !important;
         object-position: center !important;
-        display: block !important;
-        margin: 0 !important;
+        z-index: 1 !important;
+    }
+    
+    .text-image {
+        position: relative !important;
+        z-index: 3 !important;
+        max-width: 80% !important;
+        height: auto !important;
+        object-fit: contain !important;
     }
     
     /* Mobile responsive styles for banner image */
     @media (max-width: 768px) {
+        .hero {
+            height: 100vh !important;
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+        }
+        
+        .hero .container {
+            height: 100vh !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
         .hero-content {
             height: 100vh !important;
             padding: 0 !important;
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 30%, #60a5fa 70%, #93c5fd 100%) !important;
+            margin: 0 !important;
         }
         
-        .main-banner-image {
+        .banner-container {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 1 !important;
+        }
+        
+        .background-image {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            z-index: 1 !important;
+        }
+        
+        .text-image {
+            position: relative !important;
+            z-index: 3 !important;
+            max-width: 90% !important;
+            max-height: 60vh !important;
             object-fit: contain !important;
-            object-position: center center !important;
-            max-height: 80vh !important;
-            width: auto !important;
-            margin: 0 auto !important;
         }
     }
     
     @media (max-width: 480px) {
+        .hero {
+            height: 100vh !important;
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+        }
+        
+        .hero .container {
+            height: 100vh !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+        
         .hero-content {
             height: 100vh !important;
             padding: 0 !important;
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 30%, #60a5fa 70%, #93c5fd 100%) !important;
+            margin: 0 !important;
         }
         
-        .main-banner-image {
+        .banner-container {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 1 !important;
+        }
+        
+        .background-image {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            object-fit: cover !important;
+            object-position: center !important;
+            z-index: 1 !important;
+        }
+        
+        .text-image {
+            position: relative !important;
+            z-index: 3 !important;
+            max-width: 95% !important;
+            max-height: 50vh !important;
             object-fit: contain !important;
-            object-position: center center !important;
-            max-height: 70vh !important;
-            width: auto !important;
-            margin: 0 auto !important;
         }
     }
     
@@ -160,7 +249,10 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <img src="img/main_banner.png" alt="2025 가상융합혁신인재 심포지엄 메인 배너" class="main-banner-image">
+                <div class="banner-container">
+                    <img src="img/main_banner1.png" alt="배경 이미지" class="background-image">
+                    <img src="img/main_banner2.png" alt="글자 이미지" class="text-image">
+                </div>
             </div>
         </div>
     </section>
