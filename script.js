@@ -51,6 +51,28 @@ function loadHeader() {
     initializeHeader();
 }
 
+// Load footer
+function loadFooter() {
+    const footerHTML = `
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>2025 가상융합혁신인재 심포지엄</h3>
+                </div>
+                <div class="footer-info">
+                    <p><i class="fas fa-envelope"></i> metaone01@sogang.ac.kr</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 서울특별시 마포구 백범로 35(신수동) 서강대학교 가브리엘관(GA)</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    `;
+    
+    $('#footer-container').html(footerHTML);
+}
+
 // Initialize header functionality
 function initializeHeader() {
     // Mobile menu toggle
@@ -104,8 +126,9 @@ function initializeHeader() {
 }
 
 $(document).ready(function() {
-    // Load header
+    // Load header and footer
     loadHeader();
+    loadFooter();
 
     // Smooth scrolling for anchor links
     $('a[href^="#"]').on('click', function(e) {
@@ -119,17 +142,7 @@ $(document).ready(function() {
         }
     });
 
-    // Header background change on scroll
-    $(window).on('scroll', function() {
-        const scrollTop = $(window).scrollTop();
-        const header = $('.header');
-        
-        if (scrollTop > 100) {
-            header.addClass('scrolled');
-        } else {
-            header.removeClass('scrolled');
-        }
-    });
+
 
     // Animate elements on scroll
     function animateOnScroll() {
@@ -252,11 +265,6 @@ $(document).ready(function() {
 
 // Additional CSS for animations (will be added to styles.css)
 const additionalCSS = `
-    .header.scrolled {
-        background: rgba(30, 58, 138, 0.95);
-        backdrop-filter: blur(10px);
-    }
-
     .section {
         opacity: 0;
         transform: translateY(30px);
