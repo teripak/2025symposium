@@ -11,6 +11,76 @@
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+    /* Index page specific hero styles */
+    .hero {
+        background: transparent !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        padding-top: 80px !important;
+    }
+    
+    .hero::before {
+        display: none !important;
+    }
+    
+    .hero .container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .hero-content {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        height: 100vh !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .main-banner-image {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        display: block !important;
+        margin: 0 !important;
+    }
+    
+    /* Mobile responsive styles for banner image */
+    @media (max-width: 768px) {
+        .hero-content {
+            height: 100vh !important;
+            padding: 0 !important;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 30%, #60a5fa 70%, #93c5fd 100%) !important;
+        }
+        
+        .main-banner-image {
+            object-fit: contain !important;
+            object-position: center center !important;
+            max-height: 80vh !important;
+            width: auto !important;
+            margin: 0 auto !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .hero-content {
+            height: 100vh !important;
+            padding: 0 !important;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 30%, #60a5fa 70%, #93c5fd 100%) !important;
+        }
+        
+        .main-banner-image {
+            object-fit: contain !important;
+            object-position: center center !important;
+            max-height: 70vh !important;
+            width: auto !important;
+            margin: 0 auto !important;
+        }
+    }
+    
     .hero-text-container {
         position: relative;
         display: inline-block;
@@ -90,24 +160,7 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-text-container">
-                        <div class="hero-text1">2025</div>
-                        <div class="hero-text2">가상융합혁신인재</div>
-                        <div class="hero-text3">심포지엄</div>
-                    </div>
-                    <p class="hero-subtitle" style="display:none">AI와 동행 : AI대학원과 함께하는 미래 혁신</p>
-                    <div class="hero-info">
-                        <p><i class="fas fa-calendar"></i> 2025.8.21(목)</p>
-                        <p><i class="fas fa-clock"></i> 10:00 ~ 18:00</p>
-                        <p><i class="fas fa-map-marker-alt"></i> 서강대학교</p>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="ai-logo">
-                        <span class="ai-text">AI</span>
-                    </div>
-                </div>
+                <img src="img/main_banner.png" alt="2025 가상융합혁신인재 심포지엄 메인 배너" class="main-banner-image">
             </div>
         </div>
     </section>
