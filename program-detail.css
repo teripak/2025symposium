@@ -1425,7 +1425,7 @@
 }
 
 .company {
-    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -1727,7 +1727,7 @@
 }
 
 .source-cell {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    background: white;
     width: 150px;
     text-align: center;
 }
@@ -1744,6 +1744,11 @@
 
 .source-item:last-child {
     margin-bottom: 0;
+}
+
+/* Writer class styling */
+.writer {
+    font-weight: bold;
 }
 
 /* Awards Section */
