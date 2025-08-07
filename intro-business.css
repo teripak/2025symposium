@@ -1,8 +1,10 @@
 /* Page Header Styles (inherited from intro-greeting.css) */
 .page-header {
-    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    background: url('img/main_banner1.png') center top;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding: 6rem 0 3rem;
-    margin-top: 80px;
+    margin-top: 40px;
     position: relative;
     overflow: hidden;
 }
