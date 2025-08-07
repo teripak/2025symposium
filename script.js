@@ -73,6 +73,44 @@ function loadFooter() {
     $('#footer-container').html(footerHTML);
 }
 
+// Load common meta tags
+function loadCommonMetaTags() {
+    const commonMetaHTML = `
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="가상융합대학원협의회">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="ko">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="2025 가상융합혁신인재 심포지엄">
+    <meta property="og:locale" content="ko_KR">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@symposium2025">
+    
+    <!-- Common Keywords -->
+    <meta name="keywords" content="2025, 가상융합, 혁신인재, 심포지엄, AI, 메타버스, 가상현실, 증강현실, 서강대학교, 가상융합대학원, IITP, 과학기술정보통신부">
+    
+    <!-- Common Description -->
+    <meta name="description" content="2025 가상융합혁신인재 심포지엄 - AI 기반 가상융합의 미래를 그리다. 2025년 8월 21일 서강대학교에서 개최되는 가상융합 분야 최고의 심포지엄">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="">
+    `;
+    
+    // Add common meta tags to head
+    $('head').append(commonMetaHTML);
+}
+
 // Initialize header functionality
 function initializeHeader() {
     // Mobile menu toggle
@@ -126,7 +164,8 @@ function initializeHeader() {
 }
 
 $(document).ready(function() {
-    // Load header and footer
+    // Load common meta tags, header and footer
+    loadCommonMetaTags();
     loadHeader();
     loadFooter();
 
