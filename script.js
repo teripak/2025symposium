@@ -6,7 +6,7 @@ function loadHeader() {
         <div class="container">
                                     <div class="logo">
                             <a href="index.html">
-                                <h1>2025 가상융합혁신인재 심포지엄</h1>
+                                <h1>2025 가상융합대학원 성과공유회</h1>
                             </a>
                         </div>
             <nav class="nav">
@@ -59,7 +59,7 @@ function loadFooter() {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h3>2025 가상융합혁신인재 심포지엄</h3>
+                    <h3>2025 가상융합대학원 성과공유회</h3>
                 </div>
                 <div class="footer-info">
                     <p><i class="fas fa-envelope"></i> metaone01@sogang.ac.kr</p>
@@ -86,7 +86,7 @@ function loadCommonMetaTags() {
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="2025 가상융합혁신인재 심포지엄">
+    <meta property="og:site_name" content="2025 가상융합대학원 성과공유회">
     <meta property="og:locale" content="ko_KR">
     
     <!-- Twitter -->
@@ -97,7 +97,7 @@ function loadCommonMetaTags() {
     <meta name="keywords" content="2025, 가상융합, 혁신인재, 심포지엄, AI, 메타버스, 가상현실, 증강현실, 서강대학교, 가상융합대학원, IITP, 과학기술정보통신부">
     
     <!-- Common Description -->
-    <meta name="description" content="2025 가상융합혁신인재 심포지엄 - AI 기반 가상융합의 미래를 그리다. 2025년 8월 21일 서강대학교에서 개최되는 가상융합 분야 최고의 심포지엄">
+    <meta name="description" content="2025 가상융합대학원 성과공유회 - AI 기반 가상융합의 미래를 그리다. 2025년 8월 21일 서강대학교에서 개최되는 가상융합 분야 최고의 심포지엄">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -299,7 +299,7 @@ $(document).ready(function() {
     }
 
     // Uncomment the line below if you want a typing effect
-    // typeWriter($('.hero-title'), '2025 가상융합혁신인재 심포지엄');
+    // typeWriter($('.hero-title'), '2025 가상융합대학원 성과공유회');
 });
 
 // Additional CSS for animations (will be added to styles.css)
